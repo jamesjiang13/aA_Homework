@@ -1,4 +1,6 @@
 class Queue
+    attr_reader :line
+
     def initialize
         @line = []
     end

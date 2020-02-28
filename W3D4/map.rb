@@ -1,6 +1,8 @@
 require 'byebug'
 
 class Map
+    attr_reader :arr
+
     def initialize 
         @arr = []
     end
@@ -12,11 +14,7 @@ class Map
 
     def get(key)
         # debugger
-        @arr.each do |pair| 
-            if pair[0] == key
-                return pair[1] 
-            end
-        end
+        @arr.each { |pair| return pair[1] if pair[0] == key }
         print "Key does not exist"
     end
 

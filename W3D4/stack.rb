@@ -1,4 +1,6 @@
 class Stack
+    attr_reader :ivar
+
     def initialize
         @ivar = []
     end
